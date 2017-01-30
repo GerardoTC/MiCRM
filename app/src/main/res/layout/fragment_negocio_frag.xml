@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474F"
+    tools:context="micrm.micrm.com.micrm.Negocio_frag">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/negocio_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_organizacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Organización"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_persona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Persona"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Valor"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_fecha_de_cierre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Cierre"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/negocio_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Estado"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/agregar_negocio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Agregar Negocio"
+                android:onClick="AgregarNegocio" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
