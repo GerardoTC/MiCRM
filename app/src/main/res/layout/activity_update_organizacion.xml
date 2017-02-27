@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update_organizacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="micrm.micrm.com.micrm.UpdateOrganizacion"
+    android:background="#37474F">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/updateOrg_nombre"
+        android:hint="Nombre"
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9E9E9E"
+        android:textSize="28sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/updateOrg_nombre"
+        android:id="@+id/updateOrg_Dir"
+        android:hint="Direccion"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9E9E9E"
+        android:textSize="28sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/updateOrg_Dir"
+        android:layout_alignEnd="@+id/updateOrg_nombre"
+        android:id="@+id/updateOrg_tel"
+        android:hint="Telefono"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9E9E9E"
+        android:textSize="28sp" />
+
+    <Button
+        android:text="Actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateOrg_tel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:id="@+id/Actualizar_org" />
+
+</RelativeLayout>

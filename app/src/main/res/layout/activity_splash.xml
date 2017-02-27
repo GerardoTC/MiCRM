@@ -10,8 +10,10 @@
         android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/next_logo"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,8 +21,8 @@
         android:text="Bienvenidos"
         android:layout_gravity="center"
         android:id="@+id/textView"
+        android:textColor="#FFFFFF"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

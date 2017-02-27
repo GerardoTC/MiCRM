@@ -6,53 +6,65 @@
     tools:context="micrm.micrm.com.micrm.Personas_frag">
 
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/personas_nombre"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/personas_nombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nombre"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
-
-            <EditText
-                android:id="@+id/personas_telefono"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Teléfono"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
-
-            <EditText
-                android:id="@+id/personas_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp" />
 
 
-            <Button
-                android:id="@+id/agregar_actividad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Agregar Organización"
-                android:onClick="AgregarPersona" />
-        </LinearLayout>
-    </ScrollView>
+        <EditText
+            android:id="@+id/personas_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp"
+            android:layout_below="@+id/personas_nombre"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/personas_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp"
+            android:layout_below="@+id/personas_telefono"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/agregar_persona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Agregar Persona"
+            android:layout_below="@+id/personas_email"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:text="CONSULTAR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editar_persona"
+            android:layout_alignBaseline="@+id/agregar_persona"
+            android:layout_alignBottom="@+id/agregar_persona"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/agregar_persona" />
+    </RelativeLayout>
 
 
 </FrameLayout>

@@ -5,52 +5,64 @@
     android:background="#37474F"
     tools:context="micrm.micrm.com.micrm.Organizacion_frag">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+       >
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/organizacion_direccion"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp"
+            android:layout_below="@+id/organizacion_nombre"
+            android:layout_alignParentStart="true" />
 
-            <EditText
-                android:id="@+id/organizacion_nombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nombre"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
+        <EditText
+            android:id="@+id/organizacion_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp"
+            android:layout_below="@+id/organizacion_direccion"
+            android:layout_alignParentStart="true" />
 
-            <EditText
-                android:id="@+id/organizacion_direccion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Dirección"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
+        <Button
+            android:text="Consultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/agregar_organizacion"
+            android:id="@+id/editar_organizacion"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/agregar_organizacion" />
 
-            <EditText
-                android:id="@+id/organizacion_telefono"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Teléfono"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#9E9E9E"
-                android:textSize="28sp" />
+        <EditText
+            android:id="@+id/organizacion_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:textSize="28sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
-            <Button
-                android:id="@+id/agregar_actividad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Agregar Organización"
-                android:onClick="AgregarOrganizacion" />
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/agregar_organizacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Agregar Organización"
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/organizacion_telefono"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
 
 
 </FrameLayout>

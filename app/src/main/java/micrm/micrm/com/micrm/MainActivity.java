@@ -1,13 +1,8 @@
 package micrm.micrm.com.micrm;
 
-import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Home_frag.OnFragmentInteractionListener,
@@ -42,100 +36,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-    //Clic de botones Actividad, negocio, persona, y organizacion
-    public void AgregarActividad (View view){ AddActividad(); }
-    public void AgregarNegocio(View view){
-        AddNegoicio();
-    }
-    public void AgregarPersona(View view){
-        AddPersona();
-    }
-    public void AgregarOrganizacion(View view){ AddOrganizacion();}
 
 
-    //dialogos de actividad
-    public void AddActividad(){
-
-        AlertDialog.Builder cuadroDialogo = new AlertDialog.Builder(this);
-        cuadroDialogo.setTitle("Agregar Actividad");
-        cuadroDialogo.setMessage("Desea agregar activiidad?");
-        cuadroDialogo.setCancelable(false);
-        cuadroDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Actividad agregada!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.show();
-    }
-    //dialogos de actividad
-    public void AddNegoicio(){
-        AlertDialog.Builder cuadroDialogo = new AlertDialog.Builder(this);
-        cuadroDialogo.setTitle("Agregar Negocio");
-        cuadroDialogo.setMessage("Desea agregar este negocio?");
-        cuadroDialogo.setCancelable(false);
-        cuadroDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Negocio agregado!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.show();
-
-    }
-    //dialogos de Persona
-    public void AddPersona(){
-        AlertDialog.Builder cuadroDialogo = new AlertDialog.Builder(this);
-        cuadroDialogo.setTitle("Agregar Persona");
-        cuadroDialogo.setMessage("Desea agregar esta Persona?");
-        cuadroDialogo.setCancelable(false);
-        cuadroDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Persona agregada!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.show();
-
-    }
-    //dialogos de organizacion
-    private void AddOrganizacion() {
-        AlertDialog.Builder cuadroDialogo = new AlertDialog.Builder(this);
-        cuadroDialogo.setTitle("Agregar Negocio");
-        cuadroDialogo.setMessage("Desea agregar este negocio?");
-        cuadroDialogo.setCancelable(false);
-        cuadroDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Organizacion agregada!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
-            }
-        });
-        cuadroDialogo.show();
-    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
